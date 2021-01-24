@@ -83,9 +83,5 @@ namespace hpms
 
         virtual void Run() = 0;
 
-        virtual void SetCustomLogic(CustomLogic* logic)
-        {
-            ContextAdapter::logic = logic;
-        }
     };
 }
