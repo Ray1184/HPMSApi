@@ -75,7 +75,6 @@ namespace hpms
     protected:
         CustomLogic* logic;
 
-        WindowSettings windowSettings;
     public:
         inline const std::string Name() const override
         {
@@ -87,11 +86,6 @@ namespace hpms
         virtual void SetCustomLogic(CustomLogic* logic)
         {
             ContextAdapter::logic = logic;
-        }
-
-        virtual void SetWindowSettings(const WindowSettings& windowSettings)
-        {
-            ContextAdapter::windowSettings = windowSettings;
         }
     };
 }
