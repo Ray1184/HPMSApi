@@ -27,8 +27,8 @@ namespace hpms
 
         void Close();
 
-        template<typename T>
-        T* Create(const std::string& name);
+        template<typename T, typename... ARGS>
+        T* Create(const std::string& name, ARGS... args);
 
         template<typename T>
         void Destroy(T* object, const std::string& name);

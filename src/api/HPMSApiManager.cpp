@@ -4,11 +4,11 @@
 
 #include <api/HPMSApiManager.h>
 
-template<typename T>
-T* hpms::ApiManager::Create(const std::string& name)
+template<typename T, typename... ARGS>
+T* hpms::ApiManager::Create(const std::string& name, ARGS... args)
 {
-    auto fnCreateT = dynalo::get_function<T*()>("Create" + name);
-    T* objImpl = fnCreateT();
+    auto fnCreateT = dynalo::get_function<T*(ARGS...)>("Create" + name);
+    return fnCreateT(args...);
 }
 
 template<typename T>
