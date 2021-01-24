@@ -49,6 +49,13 @@ namespace hpms
 
     };
 
+    struct WindowSettings
+    {
+        unsigned int width{320};
+        unsigned int height{200};
+        std::string name{"HPMS Template"};
+    };
+
     class CustomLogic {
     protected:
         virtual void OnCreate() = 0;
@@ -67,6 +74,8 @@ namespace hpms
     {
     protected:
         CustomLogic* logic;
+
+        WindowSettings windowSettings;
     public:
         inline const std::string Name() const override
         {
@@ -80,5 +89,9 @@ namespace hpms
             ContextAdapter::logic = logic;
         }
 
+        virtual void SetWindowSettings(const WindowSettings& windowSettings)
+        {
+            ContextAdapter::windowSettings = windowSettings;
+        }
     };
 }
