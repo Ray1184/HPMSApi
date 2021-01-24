@@ -31,7 +31,7 @@ namespace hpms
         T* Create(const std::string& name);
 
         template<typename T>
-        void Destroy(T* object);
+        void Destroy(T* object, const std::string& name);
 
         inline const std::string Name() const override
         {
