@@ -9,13 +9,12 @@ T* hpms::ApiManager::Create(const std::string& name)
 {
     auto fnCreateT = dynalo::get_function<T*()>("Create" + name);
     T* objImpl = fnCreateT();
-    objImpl->SetExportName(name);
 }
 
 template<typename T>
-void hpms::ApiManager::Destroy(T* object)
+void hpms::ApiManager::Destroy(T* object, const std::string& name)
 {
-    auto fnDestroyT = dynalo::get_function<void(T*)>("Destroy" + object->GetExportName());
+    auto fnDestroyT = dynalo::get_function<void(T*)>("Destroy" + name);
     fnDestroyT(object);
 }
 
