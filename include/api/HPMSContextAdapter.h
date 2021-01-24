@@ -63,7 +63,7 @@ namespace hpms
         virtual void OnUpdate() = 0;
 
         virtual void OnInput(const std::vector<hpms::KeyEvent>& keyEvents,
-                             const std::vector<hpms::MouseEvent>& mouseBussonEvents, unsigned int x,
+                             const std::vector<hpms::MouseEvent>& mouseButtonEvents, unsigned int x,
                              unsigned int y) = 0;
 
         virtual void OnDestroy() = 0;
