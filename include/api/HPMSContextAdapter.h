@@ -57,7 +57,7 @@ namespace hpms
     };
 
     class CustomLogic {
-    protected:
+    public:
         virtual void OnCreate() = 0;
 
         virtual void OnUpdate() = 0;
