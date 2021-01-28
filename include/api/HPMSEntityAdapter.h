@@ -30,7 +30,7 @@ namespace hpms
 
         virtual void SetMode(EntityMode mode) = 0;
 
-        virtual void AttachObjectToBone(const std::string& boneName; hpms::ActorAdapter* object,
+        virtual void AttachObjectToBone(const std::string& boneName, hpms::ActorAdapter* object,
                                         const glm::vec3& offsetPosition, const glm::quat& offsetOrientation) = 0;
 
         virtual std::vector<hpms::AnimationAdapter*>& GetAllAnimations() = 0;
