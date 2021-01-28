@@ -7,6 +7,8 @@
 
 #include <common/HPMSObject.h>
 #include <api/HPMSActorAdapter.h>
+#include <api/HPMSAnimationAdapter.h>
+#include <vector>
 
 namespace hpms
 {
@@ -27,6 +29,14 @@ namespace hpms
         }
 
         virtual void SetMode(EntityMode mode) = 0;
+
+        virtual void AttachObjectToBone(const std::string& boneName; hpms::ActorAdapter* object,
+                                        const glm::vec3& offsetPosition, const glm::quat& offsetOrientation) = 0;
+
+        virtual std::vector<hpms::AnimationAdapter*>& GetAllAnimations() = 0;
+
+        virtual hpms::AnimationAdapter* GetAnimationByName(const std::string& animName) = 0;
+
 
     };
 }

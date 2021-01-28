@@ -60,7 +60,7 @@ namespace hpms
     public:
         virtual void OnCreate() = 0;
 
-        virtual void OnUpdate() = 0;
+        virtual void OnUpdate(float tpf) = 0;
 
         virtual void OnInput(const std::vector<hpms::KeyEvent>& keyEvents,
                              const std::vector<hpms::MouseEvent>& mouseButtonEvents, unsigned int x,
