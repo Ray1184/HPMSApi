@@ -6,7 +6,7 @@
 #pragma once
 
 #include <common/HPMSObject.h>
-
+#include <vector>
 
 
 namespace hpms
@@ -56,7 +56,8 @@ namespace hpms
         std::string name{"HPMS Template"};
     };
 
-    class CustomLogic {
+    class CustomLogic
+    {
     public:
         virtual void OnCreate() = 0;
 
@@ -70,7 +71,7 @@ namespace hpms
     };
 
 
-    class ContextAdapter
+    class ContextAdapter : public hpms::Object
     {
     protected:
         CustomLogic* logic;
@@ -82,6 +83,8 @@ namespace hpms
         }
 
         virtual void Run() = 0;
+
+
 
     };
 }

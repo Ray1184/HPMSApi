@@ -27,7 +27,7 @@ namespace hpms
             return "ImageAdapter";
         }
 
-        virtual void SetBlending(BlendingMode mode) = 0;
+        virtual void SetBlending(BlendingType mode) = 0;
 
     };
 }
