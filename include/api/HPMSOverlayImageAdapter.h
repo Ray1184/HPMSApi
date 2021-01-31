@@ -11,11 +11,7 @@
 namespace hpms
 {
 
-    enum ImageMode
-    {
-        BACKGROUND = 0,
-        FOREGROUND = 1
-    };
+
 
     enum BlendingType
     {
@@ -23,7 +19,7 @@ namespace hpms
         OVERLAY = 1
     };
 
-    class ImageAdapter
+    class OverlayImageAdapter : public ActorAdapter
     {
     public:
         inline const std::string Name() const override
@@ -31,13 +27,7 @@ namespace hpms
             return "ImageAdapter";
         }
 
-        virtual void SetMode(ImageMode mode) = 0;
-
         virtual void SetBlending(BlendingMode mode) = 0;
-
-        virtual void SetPosition(const glm::vec2& position) = 0;
-
-        virtual void SetVisible(bool visible) = 0;
 
     };
 }

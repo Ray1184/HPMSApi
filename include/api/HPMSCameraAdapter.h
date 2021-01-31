@@ -10,7 +10,7 @@
 
 namespace hpms
 {
-    class CameraAdapter
+    class CameraAdapter : public Object
     {
     public:
         inline const std::string Name() const override
@@ -20,11 +20,11 @@ namespace hpms
 
         virtual void SetPosition(const glm::vec3& position) = 0;
 
-        virtual const glm::vec3& GetPosition() const = 0;
+        virtual glm::vec3 GetPosition() = 0;
 
         virtual void SetRotation(const glm::quat& rotation) = 0;
 
-        virtual const glm::quat& GetRotation() const = 0;
+        virtual glm::quat GetRotation() = 0;
 
         virtual void SetNear(float near) = 0;
 
