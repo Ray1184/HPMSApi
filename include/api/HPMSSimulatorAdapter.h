@@ -1,5 +1,5 @@
 /*!
- * File HPMSContextAdapter.h
+ * File HPMSSimulatorAdapter.h
  */
 
 
@@ -71,7 +71,7 @@ namespace hpms
     };
 
 
-    class ContextAdapter : public hpms::Object
+    class SimulatorAdapter : public hpms::Object
     {
     protected:
         CustomLogic* logic;
@@ -79,7 +79,7 @@ namespace hpms
     public:
         inline const std::string Name() const override
         {
-            return "ContextAdapter";
+            return "SimulatorAdapter";
         }
 
         virtual void Run() = 0;

@@ -7,12 +7,14 @@
 #include <api/HPMSEntityAdapter.h>
 #include <api/HPMSSceneNodeAdapter.h>
 #include <api/HPMSEntityAdapter.h>
-#include <api/HPMSContextAdapter.h>
+#include <api/HPMSSimulatorAdapter.h>
 #include <api/HPMSBackgroundImageAdapter.h>
 #include <api/HPMSOverlayImageAdapter.h>
+#include <api/HPMSCameraAdapter.h>
+#include <api/HPMSLightAdapter.h>
 
 namespace hpms {
-    class SceneManagerAdapter : public hpms::Object
+    class SupplierAdapter : public hpms::Object
     {
     public:
         inline virtual const std::string Name() const override
@@ -26,7 +28,7 @@ namespace hpms {
 
         virtual hpms::CameraAdapter* GetCamera() = 0;
 
-        virtual hpms::LightAdapter* CreateLight() = 0;
+        virtual hpms::LightAdapter* CreateLight(float r, float g, float b) = 0;
 
         virtual hpms::BackgroundImageAdapter* CreateBackgroundImage(const std::string& path, unsigned int width, unsigned int height) = 0;
 
