@@ -7,7 +7,6 @@
 #include <api/HPMSEntityAdapter.h>
 #include <api/HPMSSceneNodeAdapter.h>
 #include <api/HPMSEntityAdapter.h>
-#include <api/HPMSSimulatorAdapter.h>
 #include <api/HPMSBackgroundImageAdapter.h>
 #include <api/HPMSOverlayImageAdapter.h>
 #include <api/HPMSCameraAdapter.h>
