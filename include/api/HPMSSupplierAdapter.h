@@ -12,6 +12,7 @@
 #include <api/HPMSOverlayImageAdapter.h>
 #include <api/HPMSCameraAdapter.h>
 #include <api/HPMSLightAdapter.h>
+#include <string>
 
 namespace hpms {
     class SupplierAdapter : public hpms::Object
@@ -21,6 +22,8 @@ namespace hpms {
         {
             return "SupplierAdapter";
         }
+
+        virtual std::string GetImplName() = 0;
 
         virtual hpms::EntityAdapter* CreateEntity(const std::string& path) = 0;
 
