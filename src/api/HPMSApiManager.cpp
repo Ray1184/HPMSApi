@@ -7,14 +7,14 @@
 template<typename T, typename... ARGS>
 T* hpms::ApiManager::Create(const std::string& name, ARGS... args)
 {
-    auto fnCreateT = dynalo::get_function<T*(ARGS...)>("Create" + name);
+    auto fnCreateT = dynalo::get_function<T*(ARGS...)>(libHandle, "Create" + name);
     return fnCreateT(args...);
 }
 
 template<typename T>
 void hpms::ApiManager::Destroy(T* object, const std::string& name)
 {
-    auto fnDestroyT = dynalo::get_function<void(T*)>("Destroy" + name);
+    auto fnDestroyT = dynalo::get_function<void(T*)>(libHandle, "Destroy" + name);
     fnDestroyT(object);
 }
 
