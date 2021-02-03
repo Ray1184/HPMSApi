@@ -33,9 +33,7 @@ void hpms::ApiManager::Init()
 {
     if (!init)
     {
-        std::string libName = dynalo::to_native_name(HPMS_BACKEND_IMPL);
-        std::string path = HPMS_ENGINE_IMPL_FOLDER + libName;
-        libHandle = dynalo::open(path);
+        libHandle = dynalo::open(HPMS_ENGINE_IMPL_FOLDER HPMS_BACKEND_IMPL);
         init = true;
     }
 }
