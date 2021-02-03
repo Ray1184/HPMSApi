@@ -13,8 +13,10 @@ set(GLM_VERSION 0.9.9.8)
 string(TOLOWER ${CMAKE_BUILD_TYPE} BUILD_TYPE)
 if (BUILD_TYPE STREQUAL "debug")
     set(CMAKE_DEBUG_POSTFIX "d" CACHE STRING "Debug Postfix for lib, samples and tools")
+    add_definitions(-DHPMS_BACKEND_DLL_POSTFIX="d")
 else ()
     set(CMAKE_DEBUG_POSTFIX "" CACHE STRING "Debug Postfix for lib, samples and tools")
+    add_definitions(-DHPMS_BACKEND_DLL_POSTFIX="")
 endif ()
 
 

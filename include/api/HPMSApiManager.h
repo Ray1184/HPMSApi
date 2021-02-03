@@ -11,7 +11,15 @@
 #include <common/HPMSObject.h>
 #include <api/HPMSSupplierAdapter.h>
 
-#define DEFAULT_BACKEND_IMPL "HPMSEngineImplOgre"
+#ifndef HPMS_BACKEND_DLL_POSTFIX
+#define HPMS_BACKEND_DLL_POSTFIX
+#endif
+
+#define DEFAULT_HPMS_BACKEND_IMPL "HPMSEngineImplOgre" HPMS_BACKEND_DLL_POSTFIX
+
+#ifndef HPMS_BACKEND_IMPL
+#define HPMS_BACKEND_IMPL DEFAULT_HPMS_BACKEND_IMPL
+#endif
 
 #define HPMS_CREATE_SUPPLIER_IMPL() hpms::ApiManager::GetSingleton().Create<hpms::SupplierAdapter>("Supplier")
 #define HPMS_DESTROY_SUPPLIER_IMPL(ptr) hpms::ApiManager::GetSingleton().Create<hpms::SupplierAdapter>(ptr, "Supplier")
