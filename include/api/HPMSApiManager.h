@@ -9,10 +9,12 @@
 #include <string>
 #include <common/HPMSUtils.h>
 #include <common/HPMSObject.h>
+#include <api/HPMSSupplierAdapter.h>
 
 #define DEFAULT_BACKEND_IMPL "HPMSEngineImplOgre"
 
-#define HPMS_CREATE_ENTITY_IMPL() hpms::ApiManager::GetSingleton().Create<hpms::EntityAdapter>("Entity")
+#define HPMS_CREATE_SUPPLIER_IMPL() hpms::ApiManager::GetSingleton().Create<hpms::SupplierAdapter>("Supplier")
+#define HPMS_DESTROY_SUPPLIER_IMPL(ptr) hpms::ApiManager::GetSingleton().Create<hpms::SupplierAdapter>(ptr, "Supplier")
 
 namespace hpms
 {
