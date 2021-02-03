@@ -1,6 +1,6 @@
 # Engine bridge project
 cmake_minimum_required(VERSION 3.17)
-project(HPMSBase)
+project(HPMSApi)
 set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_SHARED_LIBRARY_PREFIX)
@@ -29,4 +29,4 @@ install_from_repo(https://github.com/g-truc/glm.git GLM ${GLM_VERSION} TRUE /)
 
 include_directories(include)
 
-add_library(HPMSBase SHARED src/api/HPMSApiManager.cpp)
+add_library(HPMSApi SHARED src/api/HPMSApiManager.cpp)
