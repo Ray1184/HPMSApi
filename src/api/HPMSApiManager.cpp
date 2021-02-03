@@ -33,7 +33,7 @@ void hpms::ApiManager::Init()
 {
     if (!init)
     {
-        libHandle = dynalo::open(dynalo::to_native_name(HPMS_ENGINE_IMPL_FOLDER HPMS_BACKEND_IMPL));
+        libHandle = dynalo::open(HPMS_ENGINE_IMPL_FOLDER + dynalo::to_native_name(HPMS_BACKEND_IMPL));
         init = true;
     }
 }
