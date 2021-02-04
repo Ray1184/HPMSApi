@@ -32,7 +32,7 @@ namespace hpms {
             return "SupplierAdapter";
         }
 
-        virtual ~SupplierAdapter()
+        inline virtual ~SupplierAdapter()
         {
 
         }
