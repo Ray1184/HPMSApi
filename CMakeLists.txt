@@ -33,4 +33,4 @@ set(SOURCES
         src/common/HPMSUtils.cpp
         src/api/HPMSApiManager.cpp)
 
-add_library(HPMSApi ${SOURCES})
+add_library(HPMSApi SHARED ${SOURCES})
