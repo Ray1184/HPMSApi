@@ -26,11 +26,7 @@ namespace hpms {
     class SupplierAdapter : public hpms::Object
     {
     public:
-        inline virtual ~SupplierAdapter()
-        {
-
-        }
-
+        virtual ~SupplierAdapter() = 0;
 
         inline virtual const std::string Name() const override
         {
