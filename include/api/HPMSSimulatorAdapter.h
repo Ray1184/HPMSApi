@@ -13,13 +13,6 @@
 namespace hpms
 {
 
-    struct WindowSettings
-    {
-        unsigned int width{320};
-        unsigned int height{200};
-        std::string name{"HPMS Template"};
-    };
-
     class CustomLogic
     {
     public:

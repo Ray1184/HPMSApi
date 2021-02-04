@@ -14,6 +14,15 @@
 #include <string>
 
 namespace hpms {
+
+
+    struct WindowSettings
+    {
+        unsigned int width{320};
+        unsigned int height{200};
+        std::string name{"HPMS Template"};
+    };
+
     class SupplierAdapter : public hpms::Object
     {
     public:
