@@ -18,7 +18,7 @@ namespace hpms
             return "AnimationAdapter";
         }
 
-        inline virtual ~SupplierAdapter()
+        inline virtual ~AnimationAdapter()
         {
 
         }

@@ -18,7 +18,7 @@ namespace hpms
             return "ActorAdapter";
         }
 
-        inline virtual ~SupplierAdapter()
+        inline virtual ~ActorAdapter()
         {
 
         }
