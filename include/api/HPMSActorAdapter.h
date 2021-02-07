@@ -18,6 +18,11 @@ namespace hpms
             return "ActorAdapter";
         }
 
+        inline virtual ~SupplierAdapter()
+        {
+
+        }
+
         virtual std::string GetName() = 0;
 
         virtual void SetPosition(const glm::vec3& position) = 0;

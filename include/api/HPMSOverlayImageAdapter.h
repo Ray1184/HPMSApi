@@ -27,6 +27,11 @@ namespace hpms
             return "ImageAdapter";
         }
 
+        inline virtual ~OverlayImageAdapter()
+        {
+
+        }
+
         virtual void SetBlending(BlendingType mode) = 0;
 
     };

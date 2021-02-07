@@ -18,6 +18,11 @@ namespace hpms
             return "AnimationAdapter";
         }
 
+        inline virtual ~SupplierAdapter()
+        {
+
+        }
+
         virtual void Update(float tpf) = 0;
 
         virtual bool IsPlaying()  = 0;

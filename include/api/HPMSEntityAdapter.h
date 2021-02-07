@@ -28,6 +28,11 @@ namespace hpms
             return "EntityAdapter";
         }
 
+        inline virtual ~EntityAdapter()
+        {
+
+        }
+
         virtual void SetMode(EntityMode mode) = 0;
 
         virtual void AttachObjectToBone(const std::string& boneName, hpms::ActorAdapter* object,

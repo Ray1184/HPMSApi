@@ -39,6 +39,11 @@ namespace hpms
             return "SimulatorAdapter";
         }
 
+        inline virtual ~SimulatorAdapter()
+        {
+
+        }
+
         virtual void Run() = 0;
 
 

@@ -21,6 +21,11 @@ namespace hpms
             return "SceneManagerAdapter";
         }
 
+        inline virtual ~SceneManagerAdapter()
+        {
+
+        }
+
         virtual hpms::EntityAdapter* CreateEntity(const std::string& path) = 0;
 
         virtual hpms::SceneNodeAdapter* GetRootSceneNode() = 0;

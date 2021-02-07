@@ -18,6 +18,11 @@ namespace hpms
             return "LightAdapter";
         }
 
+        inline virtual ~LightAdapter()
+        {
+
+        }
+
         virtual void SetColor(const glm::vec3& rgb) = 0;
 
     };

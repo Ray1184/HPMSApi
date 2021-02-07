@@ -19,6 +19,11 @@ namespace hpms
             return "SceneNodeAdapter";
         }
 
+        inline virtual ~SceneNodeAdapter()
+        {
+
+        }
+
         virtual SceneNodeAdapter* CreateChild(const std::string& name) = 0;
 
         virtual void AttachObject(ActorAdapter* actor) = 0;

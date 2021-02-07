@@ -19,5 +19,10 @@ namespace hpms
             return "ImageAdapter";
         }
 
+        inline virtual ~BackgroundImageAdapter()
+        {
+
+        }
+
     };
 }
