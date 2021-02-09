@@ -23,14 +23,11 @@ endif ()
 include(cmake/Shared.cmake)
 
 # Other libraries setup.
-install_from_repo(https://github.com/maddouri/dynalo.git DYNALO ${DYNALO_VERSION} FALSE /include/dynalo/)
-
 install_from_repo(https://github.com/g-truc/glm.git GLM ${GLM_VERSION} TRUE /)
 
 include_directories(include)
 
 set(SOURCES
-        src/common/HPMSUtils.cpp
-        src/api/HPMSApiManager.cpp)
+        src/common/HPMSUtils.cpp)
 
 add_library(HPMSApi SHARED ${SOURCES})
