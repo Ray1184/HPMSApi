@@ -30,4 +30,4 @@ include_directories(include)
 set(SOURCES
         src/common/HPMSUtils.cpp)
 
-add_library(HPMSApi SHARED ${SOURCES})
+add_library(HPMSApi STATIC ${SOURCES})
